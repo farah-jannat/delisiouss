@@ -28,13 +28,13 @@ function Recipe() {
             <Button className={activeTab === 'ingredients'? 'active':""} onClick={() => setActiveTab("ingredients")}>Ingredients</Button>
             <div>
                 <h3 dangerouslySetInnerHTML={{__html: details.summary}}></h3>
-                <h3 dangerouslySetInnerHTML={{__html:details.instructions }}></h3>
+                {/* <h3 dangerouslySetInnerHTML={{__html:details.instructions }}></h3> */}
             </div>
-            <ul>
+            {/* <ul>
                 {details.extendedIngredients.map((extendedIngredients)=>
-                <li key={ingredient.id}>{ingredient.original}</li>
+                <li key={ingredients.id}>{ingredients.original}</li>
                 )}
-            </ul>
+            </ul> */}
         </Info>
     </DetailWrapper>
 
@@ -58,15 +58,15 @@ const DetailWrapper = styled.div`
     }
     h3{
         font-size:0.9rem;
-        line-height:.4rem;
+        line-height:1rem;
     }
     li{
         font-size:1.2rem;
         line-height:2.5rem;
     }
-    ul{
-        margin-top:2rem;
-    }
+    // ul{
+    //     margin-top:2rem;
+    // }
 `;
 const Button = styled.button`
     padding:1rem 2rem;
